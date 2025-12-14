@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316" />
+      <stop offset="100%" style="stop-color:#ea580c" />
+    </linearGradient>
+  </defs>
+  <polygon
+    points="16,2 28,8 28,24 16,30 4,24 4,8"
+    fill="url(#orangeGradient)" />
+  <text x="16" y="21" text-anchor="middle" font-family="Arial" font-size="14" fill="#0f172a" font-weight="bold">S</text>
+</svg>
