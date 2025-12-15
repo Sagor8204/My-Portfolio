@@ -7,12 +7,6 @@ export default function Footer() {
     { lang: "English", text: "Thanks" },
     { lang: "Bengali", text: "ধন্যবাদ" },
     { lang: "Hindi", text: "धन्यवाद" },
-    { lang: "Spanish", text: "Gracias" },
-    { lang: "French", text: "Merci" },
-    { lang: "German", text: "Danke" },
-    { lang: "Japanese", text: "ありがとう" },
-    { lang: "Korean", text: "감사합니다" },
-    { lang: "Chinese", text: "谢谢" },
     { lang: "Arabic", text: "شكرًا" },
   ];
 
@@ -37,7 +31,7 @@ export default function Footer() {
 
         {/* Copyright Notice */}
         <div className="text-center text-[#94a3b8]">
-          <p>&copy; {currentYear} Gaus Al Munir Tushar. All rights reserved.</p>
+          <p>&copy; {currentYear} Md Sagor. All rights reserved.</p>
         </div>
       </div>
     </footer>
