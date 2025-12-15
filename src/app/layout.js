@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Gaus Al Munir Tushar - Software Engineer",
-  description: "Personal portfolio of Gaus Al Munir Tushar, a Full Stack Software Engineer",
+  title: "Md Sagor - Full Stack Developer",
+  description: "Personal portfolio of Md Sagor, a Full Stack Developer",
   icons: {
     icon: "/favicon.svg",
   },
