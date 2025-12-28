@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { profile } from "../../../lib/data";
 import { FaReact, FaNodeJs, FaAws, FaDatabase, FaJava, FaFigma } from "react-icons/fa";
 import { SiTypescript, SiNextdotjs } from "react-icons/si";
+import Link from "next/link";
 
 const floatingIcons = [
   { icon: <FaReact size={30} className="text-[#f97316]" />, delay: 0 },
@@ -18,8 +19,8 @@ const floatingIcons = [
 
 export default function Hero() {
   return (
-    <section id="hero" className="py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+    <section id="hero" className="py-20 mt-12 px-4">
+      <div className="mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Text Content */}
           <motion.div
@@ -70,12 +71,12 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              <button className="px-8 py-3 bg-linear-to-r from-[#f97316] to-[#ea580c] rounded-full font-medium text-[#0f172a] hover:opacity-90 transition-opacity">
+              <Link href="/resume" className="px-8 py-3 bg-linear-to-r from-[#f97316] to-[#ea580c] rounded-full font-medium text-[#0f172a] hover:opacity-90 transition-opacity">
                 Resume / CV
-              </button>
-              <button className="px-8 py-3 border border-[#f97316] rounded-full font-medium text-[#f97316] hover:bg-[#f97316] hover:text-[#0f172a] transition-colors">
+              </Link>
+              <Link href="#contact" className="px-8 py-3 border border-[#f97316] rounded-full font-medium text-[#f97316] hover:bg-[#f97316] hover:text-[#0f172a] transition-colors">
                 Hire Me
-              </button>
+              </Link>
             </motion.div>
           </motion.div>
 

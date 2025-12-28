@@ -28,7 +28,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -98,7 +98,7 @@ export default function Contact() {
               
               <button
                 type="submit"
-                className="w-full py-3 bg-gradient-to-r from-[#f97316] to-[#ea580c] rounded-lg font-bold text-[#0f172a] hover:opacity-90 transition-opacity"
+                className="w-full py-3 bg-linear-to-r from-[#f97316] to-[#ea580c] rounded-lg font-bold text-[#0f172a] hover:opacity-90 transition-opacity"
               >
                 Message Me
               </button>
@@ -119,7 +119,7 @@ export default function Contact() {
               <div className="space-y-6">
                 <div>
                   <h4 className="text-[#f97316] font-medium mb-2">Email</h4>
-                  <p className="text-[#f8fafc]">gausalmunirtushar@example.com</p>
+                  <p className="text-[#f8fafc]">sagormiah8204@gmail.com</p>
                 </div>
                 
                 <div>
