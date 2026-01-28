@@ -5,6 +5,7 @@ import { profile } from "../../../lib/data";
 import { FaReact, FaNodeJs, FaAws, FaDatabase, FaJava, FaFigma } from "react-icons/fa";
 import { SiTypescript, SiNextdotjs } from "react-icons/si";
 import Link from "next/link";
+import LinkButton from "./common/LinkButton";
 
 const floatingIcons = [
   { icon: <FaReact size={30} className="text-[#f97316]" />, delay: 0 },
@@ -71,12 +72,16 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              <Link href="/resume" className="px-8 py-3 bg-linear-to-r from-[#f97316] to-[#ea580c] rounded-full font-medium text-[#0f172a] hover:opacity-90 transition-opacity">
-                Resume / CV
-              </Link>
-              <Link href="#contact" className="px-8 py-3 border border-[#f97316] rounded-full font-medium text-[#f97316] hover:bg-[#f97316] hover:text-[#0f172a] transition-colors">
-                Hire Me
-              </Link>
+              <LinkButton
+                text="Resume / CV"
+                href="/resume"
+                styles="px-8 py-3 bg-linear-to-r from-[#f97316] to-[#ea580c] rounded-full font-medium text-white hover:opacity-90 transition-opacity"
+              />
+              <LinkButton
+                text="Hire Me"
+                href="#contact"
+                styles="px-8 py-3 border border-[#f97316] rounded-full font-medium text-white hover:bg-[#ea580c] transition-colors"
+              />
             </motion.div>
           </motion.div>
 

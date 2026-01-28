@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Button from "./common/Button";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -51,11 +52,15 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="bg-[#1e293b] bg-opacity-50 backdrop-blur-lg rounded-xl p-8 border border-slate-700"
           >
-            <h3 className="text-2xl font-bold text-[#f8fafc] mb-6">Send a Message</h3>
-            
+            <h3 className="text-2xl font-bold text-[#f8fafc] mb-6">
+              Send a Message
+            </h3>
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-[#f8fafc] mb-2">Name</label>
+                <label htmlFor="name" className="block text-[#f8fafc] mb-2">
+                  Name
+                </label>
                 <input
                   type="text"
                   id="name"
@@ -67,9 +72,11 @@ export default function Contact() {
                   placeholder="Your name"
                 />
               </div>
-              
+
               <div>
-                <label htmlFor="email" className="block text-[#f8fafc] mb-2">Email</label>
+                <label htmlFor="email" className="block text-[#f8fafc] mb-2">
+                  Email
+                </label>
                 <input
                   type="email"
                   id="email"
@@ -81,9 +88,11 @@ export default function Contact() {
                   placeholder="Your email"
                 />
               </div>
-              
+
               <div>
-                <label htmlFor="message" className="block text-[#f8fafc] mb-2">Message</label>
+                <label htmlFor="message" className="block text-[#f8fafc] mb-2">
+                  Message
+                </label>
                 <textarea
                   id="message"
                   name="message"
@@ -95,13 +104,12 @@ export default function Contact() {
                   placeholder="Your message"
                 ></textarea>
               </div>
-              
-              <button
+
+              <Button
+                text="Message Me"
+                styles="w-full py-3 bg-linear-to-r from-[#f97316] to-[#ea580c] rounded-lg font-bold text-white hover:opacity-90 transition-opacity"
                 type="submit"
-                className="w-full py-3 bg-linear-to-r from-[#f97316] to-[#ea580c] rounded-lg font-bold text-[#0f172a] hover:opacity-90 transition-opacity"
-              >
-                Message Me
-              </button>
+              />
             </form>
           </motion.div>
 
@@ -114,26 +122,30 @@ export default function Contact() {
             className="space-y-8"
           >
             <div className="bg-[#1e293b] bg-opacity-50 backdrop-blur-lg rounded-xl p-8 border border-slate-700">
-              <h3 className="text-2xl font-bold text-[#f8fafc] mb-6">Contact Information</h3>
-              
+              <h3 className="text-2xl font-bold text-[#f8fafc] mb-6">
+                Contact Information
+              </h3>
+
               <div className="space-y-6">
                 <div>
                   <h4 className="text-[#f97316] font-medium mb-2">Email</h4>
                   <p className="text-[#f8fafc]">sagormiah8204@gmail.com</p>
                 </div>
-                
+
                 <div>
-                  <h4 className="text-[#f97316] font-medium mb-2">Book a Meeting</h4>
-                  <a 
-                    href="https://calendar.app.google" 
-                    target="_blank" 
+                  <h4 className="text-[#f97316] font-medium mb-2">
+                    Book a Meeting
+                  </h4>
+                  <a
+                    href="https://calendar.app.google"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#f97316] hover:underline"
                   >
                     Schedule a meeting
                   </a>
                 </div>
-                
+
                 <div>
                   <h4 className="text-[#f97316] font-medium mb-2">Location</h4>
                   <p className="text-[#f8fafc]">Dhaka, Bangladesh</p>
@@ -144,25 +156,25 @@ export default function Contact() {
             <div className="bg-[#1e293b] bg-opacity-50 backdrop-blur-lg rounded-xl p-8 border border-slate-700">
               <h4 className="text-[#f97316] font-medium mb-4">Follow Me</h4>
               <div className="flex space-x-4">
-                <a 
-                  href="https://github.com/gausalmunirtushar" 
-                  target="_blank" 
+                <a
+                  href="https://github.com/gausalmunirtushar"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#f8fafc] hover:text-[#f97316] transition-colors"
                 >
                   GitHub
                 </a>
-                <a 
-                  href="https://linkedin.com/in/gausalmunirtushar" 
-                  target="_blank" 
+                <a
+                  href="https://linkedin.com/in/gausalmunirtushar"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#f8fafc] hover:text-[#f97316] transition-colors"
                 >
                   LinkedIn
                 </a>
-                <a 
-                  href="https://twitter.com/gausalmunirtushar" 
-                  target="_blank" 
+                <a
+                  href="https://twitter.com/gausalmunirtushar"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#f8fafc] hover:text-[#f97316] transition-colors"
                 >

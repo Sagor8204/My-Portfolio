@@ -43,9 +43,9 @@ export default function Skills() {
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              className={`px-6 py-3 rounded-full transition-all duration-300 ${
+              className={`px-6 py-3 rounded-full transition-all duration-300 cursor-pointer ${
                 activeTab === tab.id
-                  ? "bg-linear-to-r from-[#f97316] to-[#ea580c] text-[#0f172a] font-medium"
+                  ? "bg-linear-to-r from-[#f97316] to-[#ea580c] text-white font-medium"
                   : "bg-[#1e293b] text-[#f8fafc] hover:bg-[#334155]"
               }`}
               onClick={() => setActiveTab(tab.id)}

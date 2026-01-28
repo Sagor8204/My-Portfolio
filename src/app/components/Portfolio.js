@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { projects } from "../../../lib/data";
 import Image from "next/image";
+import LinkButton from "./common/LinkButton";
 
 export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -37,9 +38,9 @@ export default function Portfolio() {
           {categories.map((category) => (
             <button
               key={category}
-              className={`px-6 py-2 rounded-full transition-all duration-300 ${
+              className={`px-6 py-2 rounded-full transition-all duration-300 cursor-pointer ${
                 activeFilter === category
-                  ? "bg-linear-to-r from-[#f97316] to-[#ea580c] text-[#0f172a] font-medium"
+                  ? "bg-linear-to-r from-[#f97316] to-[#ea580c] text-white font-medium"
                   : "bg-[#1e293b] text-[#f8fafc] hover:bg-[#334155]"
               }`}
               onClick={() => setActiveFilter(category)}
@@ -108,22 +109,20 @@ export default function Portfolio() {
 
                 {/* Action Buttons */}
                 <div className="flex space-x-2">
-                  <a
+                  <LinkButton
+                    text="live"
                     href={project.links.live}
+                    styles="px-4 py-2 bg-linear-to-r w-1/2 text-center from-[#f97316] to-[#ea580c] rounded-full text-white text-sm font-medium hover:opacity-90 transition-opacity"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-linear-to-r w-1/2 text-center from-[#f97316] to-[#ea580c] rounded-full text-[#0f172a] text-sm font-medium hover:opacity-90 transition-opacity"
-                  >
-                    Live
-                  </a>
-                  <a
+                  />
+                  <LinkButton
+                    text="Code"
                     href={project.links.github}
+                    styles="px-4 py-2 border w-1/2 text-center border-[#f97316] rounded-full text-white text-sm font-medium hover:bg-[#f97316] transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 border w-1/2 text-center border-[#f97316] rounded-full text-[#f97316] text-sm font-medium hover:bg-[#f97316] hover:text-[#0f172a] transition-colors"
-                  >
-                    Code
-                  </a>
+                  />
                 </div>
               </div>
             </motion.div>

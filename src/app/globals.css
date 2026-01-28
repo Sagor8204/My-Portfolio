@@ -25,3 +25,20 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), sans-serif;
 }
+
+
+/* Hide scrollbar but keep scroll working */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* IE / Edge */
+body {
+  -ms-overflow-style: none;
+}

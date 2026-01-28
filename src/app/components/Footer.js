@@ -20,7 +20,7 @@ export default function Footer() {
           {thanksInLanguages.map((item, index) => (
             <motion.button
               key={index}
-              className="px-4 py-2 bg-linear-to-r from-[#f97316] to-[#ea580c] rounded-full text-[#0f172a] text-sm font-medium hover:opacity-90 transition-opacity"
+              className="px-4 py-2 bg-linear-to-r from-[#f97316] to-[#ea580c] rounded-full text-white text-sm font-medium hover:opacity-90 transition-opacity"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
