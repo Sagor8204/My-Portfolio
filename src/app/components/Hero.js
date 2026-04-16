@@ -4,18 +4,17 @@ import { motion } from "framer-motion";
 import { profile } from "../../../lib/data";
 import { FaReact, FaNodeJs, FaAws, FaDatabase, FaJava, FaFigma } from "react-icons/fa";
 import { SiTypescript, SiNextdotjs } from "react-icons/si";
-import Link from "next/link";
 import LinkButton from "./common/LinkButton";
 
 const floatingIcons = [
-  { icon: <FaReact size={30} className="text-[#f97316]" />, delay: 0 },
-  { icon: <SiTypescript size={30} className="text-[#f97316]" />, delay: 0.4 },
-  { icon: <FaNodeJs size={30} className="text-[#f97316]" />, delay: 0.8 },
-  { icon: <FaAws size={30} className="text-[#f97316]" />, delay: 1.2 },
-  { icon: <SiNextdotjs size={30} className="text-[#f97316]" />, delay: 1.6 },
-  { icon: <FaDatabase size={30} className="text-[#f97316]" />, delay: 2.0 },
-  { icon: <FaJava size={30} className="text-[#f97316]" />, delay: 2.4 },
-  { icon: <FaFigma size={30} className="text-[#f97316]" />, delay: 2.8 },
+  { icon: <FaReact size={30} className="text-(--primary)" />, delay: 0 },
+  { icon: <SiTypescript size={30} className="text-(--primary)" />, delay: 0.4 },
+  { icon: <FaNodeJs size={30} className="text-(--primary)" />, delay: 0.8 },
+  { icon: <FaAws size={30} className="text-(--primary)" />, delay: 1.2 },
+  { icon: <SiNextdotjs size={30} className="text-(--primary)" />, delay: 1.6 },
+  { icon: <FaDatabase size={30} className="text-(--primary)" />, delay: 2.0 },
+  { icon: <FaJava size={30} className="text-(--primary)" />, delay: 2.4 },
+  { icon: <FaFigma size={30} className="text-(--primary)" />, delay: 2.8 },
 ];
 
 export default function Hero() {
@@ -31,7 +30,7 @@ export default function Hero() {
             className="text-center lg:text-left"
           >
             <motion.p
-              className="text-[#f97316] text-lg font-medium mb-4"
+              className="text-(--primary) text-lg font-medium mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -40,7 +39,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.h1
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#f8fafc] mb-4"
+              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
@@ -49,7 +48,7 @@ export default function Hero() {
             </motion.h1>
 
             <motion.h2
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#f97316] mb-6"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-(--primary) mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -58,7 +57,7 @@ export default function Hero() {
             </motion.h2>
 
             <motion.p
-              className="text-[#94a3b8] text-lg mb-10 max-w-xl mx-auto lg:mx-0"
+              className="text-(--text-muted) text-lg mb-10 max-w-xl mx-auto lg:mx-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
@@ -75,12 +74,12 @@ export default function Hero() {
               <LinkButton
                 text="Resume / CV"
                 href="/resume"
-                styles="px-8 py-3 bg-linear-to-r from-[#f97316] to-[#ea580c] rounded-full font-medium text-white hover:opacity-90 transition-opacity"
+                styles="px-8 py-3 bg-linear-to-r from-(--primary) to-(--primary-hover) rounded-md font-medium text-white hover:from-(--primary-hover) hover:to-(--primary) transition-all duration-500"
               />
               <LinkButton
                 text="Hire Me"
                 href="#contact"
-                styles="px-8 py-3 border border-[#f97316] rounded-full font-medium text-white hover:bg-[#ea580c] transition-colors"
+                styles="px-8 py-3 border border-(--primary) rounded-md font-medium hover:bg-(--primary-hover) hover:text-white transition-colors"
               />
             </motion.div>
           </motion.div>
@@ -88,7 +87,7 @@ export default function Hero() {
           {/* Right Column - Image with Floating Icons */}
           <div className="relative flex justify-center items-center">
             <motion.div
-              className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-linear-to-b from-[#f97316] to-[#ea580c] flex items-center justify-center overflow-hidden"
+              className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-linear-to-b from-(--primary) to-(--primary-hover) flex items-center justify-center overflow-hidden"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}

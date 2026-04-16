@@ -6,10 +6,10 @@ import { skills } from "../../../lib/data";
 import { FaGlobe, FaCode, FaDatabase, FaWrench } from "react-icons/fa";
 
 const skillIcons = {
-  web: <FaGlobe size={24} className="text-[#f97316]" />,
-  programming: <FaCode size={24} className="text-[#f97316]" />,
-  databases: <FaDatabase size={24} className="text-[#f97316]" />,
-  tools: <FaWrench size={24} className="text-[#f97316]" />,
+  web: <FaGlobe size={24} className="text-(--primary)" />,
+  programming: <FaCode size={24} className="text-(--primary)" />,
+  databases: <FaDatabase size={24} className="text-(--primary)" />,
+  tools: <FaWrench size={24} className="text-(--primary)" />,
 };
 
 export default function Skills() {
@@ -26,14 +26,14 @@ export default function Skills() {
     <section id="skill" className="py-20 px-4">
       <div className="mx-auto">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold text-[#f97316] mb-4">Skills</h2>
-          <p className="text-[#94a3b8] max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-(--primary) mb-4">Skills</h2>
+          <p className="text-(--text-muted) max-w-2xl mx-auto">
             A showcase of my technical abilities across different domains
           </p>
         </motion.div>
@@ -43,10 +43,10 @@ export default function Skills() {
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              className={`px-6 py-3 rounded-full transition-all duration-300 cursor-pointer ${
+              className={`px-6 py-3 rounded-md border border-(--border) transition-all duration-300 cursor-pointer ${
                 activeTab === tab.id
-                  ? "bg-linear-to-r from-[#f97316] to-[#ea580c] text-white font-medium"
-                  : "bg-[#1e293b] text-[#f8fafc] hover:bg-[#334155]"
+                  ? "bg-linear-to-r from-(--primary) to-(--gradient) text-white font-medium"
+                  : "bg-(--bg-surface) text-(--text-main) hover:bg-[#334155]"
               }`}
               onClick={() => setActiveTab(tab.id)}
             >

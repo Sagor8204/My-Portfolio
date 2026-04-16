@@ -11,18 +11,40 @@
   --border-color: #334155;
 }
 
-@theme inline {
+:root {
+  /* Backgrounds */
+  --bg-main: #0f172a;
+  --bg-surface: #1e293b;
+  
+  /* Brand Colors */
+  --primary: #10b981;        /* Django/Node Green mix */
+  --primary-hover: #059669;
+  --secondary: #38bdf8;      /* Python Blue */
+  --secondary-hover: #0ea5e9;
+  --gradient: #f97316;
+  
+  /* Text */
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  
+  /* UI Elements */
+  --border: #334155;
+  --error: #ef4444;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card-bg: var(--card-bg);
   --color-secondary-text: var(--secondary-text);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
+} */
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--text-main);
   font-family: var(--font-geist-sans), sans-serif;
 }
 
