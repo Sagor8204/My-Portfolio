@@ -19,15 +19,15 @@ const floatingIcons = [
 
 export default function Hero() {
   return (
-    <section id="hero" className="py-20 mt-12 px-4">
+    <section id="hero" className="py-16 md:py-20 md:mt-12 px-4">
       <div className="mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-3 items-center">
           {/* Left Column - Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
+            className="text-center lg:text-left col-span-2 mb-20 md:mb-0"
           >
             <motion.p
               className="text-(--primary) text-lg font-medium mb-4"

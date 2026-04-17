@@ -5,7 +5,7 @@ import { experience } from "../../../lib/data";
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-10 px-4">
+    <section id="experience" className="py-6 md:py-10 px-4">
       <div className="mx-auto">
         <motion.div
           className="text-center mb-10"

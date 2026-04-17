@@ -13,7 +13,8 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40 bg-(--bg-surface) bg-opacity-50 backdrop-blur-lg rounded-md py-3 px-6 shadow-lg border border-(--border) max-w-lg w-full mx-4">
+    <nav className="hidden md:block">
+      <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40 bg-(--bg-surface) bg-opacity-50 backdrop-blur-lg rounded-md py-3 px-6 shadow-lg border border-(--border) max-w-lg w-full mx-4">
       <div className="flex items-center justify-between">
         {/* Hexagon logo on the left */}
         <Link href="/">
@@ -34,6 +35,7 @@ export default function Navbar() {
           ))}
         </div>
       </div>
+    </div>
     </nav>
   );
 }

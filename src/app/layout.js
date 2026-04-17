@@ -17,7 +17,7 @@ export const metadata = {
   title: "Md Sagor - Full Stack Developer",
   description: "Personal portfolio of Md Sagor, a Full Stack Developer",
   icons: {
-    icon: "/favicon.svg",
+    icon: "/images/logo.svg",
   },
 };
 

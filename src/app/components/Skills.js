@@ -23,7 +23,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skill" className="py-20 px-4">
+    <section id="skill" className="py-10 md:py-20 px-4">
       <div className="mx-auto">
         <motion.div
           className="text-center mb-10"
