@@ -45,7 +45,7 @@ export default function Skills() {
               key={tab.id}
               className={`px-6 py-3 rounded-md border border-(--border) transition-all duration-300 cursor-pointer ${
                 activeTab === tab.id
-                  ? "bg-linear-to-r from-(--primary) to-(--gradient) text-white font-medium"
+                  ? "bg-(--primary) text-white font-medium"
                   : "bg-(--bg-surface) text-(--text-main) hover:bg-[#334155]"
               }`}
               onClick={() => setActiveTab(tab.id)}
@@ -66,7 +66,7 @@ export default function Skills() {
           {skills[activeTab].map((skill, index) => (
             <motion.div
               key={index}
-              className="bg-[#1e293b] bg-opacity-50 backdrop-blur-lg rounded-xl p-6 border border-slate-700 flex flex-col items-center text-center hover:border-[#f97316] transition-colors duration-300"
+              className="bg-[#1e293b] bg-opacity-50 backdrop-blur-lg rounded-xl p-6 border border-(--border) flex flex-col items-center text-center hover:border-(--primary-hover) transition-colors duration-300"
               whileHover={{ y: -5 }}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -75,8 +75,7 @@ export default function Skills() {
               <div className="mb-4">
                 {skillIcons[activeTab]}
               </div>
-              <h3 className="text-lg font-bold text-[#f8fafc] mb-1">{skill.name}</h3>
-              <p className="text-sm text-[#94a3b8]">{skill.level}</p>
+              <h3 className="text-lg font-bold text-(--text-main) mb-1">{skill.name}</h3>
             </motion.div>
           ))}
         </motion.div>

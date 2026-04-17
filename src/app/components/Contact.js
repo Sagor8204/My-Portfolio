@@ -37,8 +37,8 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold text-[#f97316] mb-4">Contact</h2>
-          <p className="text-[#94a3b8] max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-(--primary) mb-4">Contact</h2>
+          <p className="text-(--text-muted) max-w-2xl mx-auto">
             Get in touch with me for collaborations or just to say hello
           </p>
         </motion.div>
@@ -50,15 +50,15 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-[#1e293b] bg-opacity-50 backdrop-blur-lg rounded-xl p-8 border border-slate-700"
+            className="bg-(--bg-surface) bg-opacity-50 backdrop-blur-lg rounded-md p-8 border border-(--border)"
           >
-            <h3 className="text-2xl font-bold text-[#f8fafc] mb-6">
+            <h3 className="text-2xl font-bold text-(--text-main) mb-6">
               Send a Message
             </h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-[#f8fafc] mb-2">
+                <label htmlFor="name" className="block text-(--text-main) mb-2">
                   Name
                 </label>
                 <input
@@ -68,13 +68,13 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-[#0f172a] border border-slate-700 rounded-lg text-[#f8fafc] focus:outline-none focus:ring-2 focus:ring-[#f97316]"
+                  className="w-full px-4 py-3 bg-(--bg-main) border border-(--border) rounded-lg text-(--text-main) focus:outline-none focus:ring-2 focus:ring-(--primary)"
                   placeholder="Your name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-[#f8fafc] mb-2">
+                <label htmlFor="email" className="block text-(--text-main) mb-2">
                   Email
                 </label>
                 <input
@@ -84,13 +84,13 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-[#0f172a] border border-slate-700 rounded-lg text-[#f8fafc] focus:outline-none focus:ring-2 focus:ring-[#f97316]"
+                  className="w-full px-4 py-3 bg-(--bg-main) border border-(--border) rounded-lg text-(--text-main) focus:outline-none focus:ring-2 focus:ring-(--primary)"
                   placeholder="Your email"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-[#f8fafc] mb-2">
+                <label htmlFor="message" className="block text-(--text-main) mb-2">
                   Message
                 </label>
                 <textarea
@@ -100,14 +100,14 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows="5"
-                  className="w-full px-4 py-3 bg-[#0f172a] border border-slate-700 rounded-lg text-[#f8fafc] focus:outline-none focus:ring-2 focus:ring-[#f97316]"
+                  className="w-full px-4 py-3 bg-(--bg-main) border border-(--border) rounded-lg text-(--text-main) focus:outline-none focus:ring-2 focus:ring-(--primary)"
                   placeholder="Your message"
                 ></textarea>
               </div>
 
               <Button
                 text="Message Me"
-                styles="w-full py-3 bg-linear-to-r from-[#f97316] to-[#ea580c] rounded-lg font-bold text-white hover:opacity-90 transition-opacity"
+                styles="w-full py-3 bg-(--primary) rounded-lg font-bold text-white hover:bg-(--primary-hover) transition-all duration-300"
                 type="submit"
               />
             </form>
@@ -121,46 +121,46 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="space-y-8"
           >
-            <div className="bg-[#1e293b] bg-opacity-50 backdrop-blur-lg rounded-xl p-8 border border-slate-700">
-              <h3 className="text-2xl font-bold text-[#f8fafc] mb-6">
+            <div className="bg-(--bg-surface) bg-opacity-50 backdrop-blur-lg rounded-md p-8 border border-(--border)">
+              <h3 className="text-2xl font-bold  mb-6">
                 Contact Information
               </h3>
 
               <div className="space-y-6">
                 <div>
-                  <h4 className="text-[#f97316] font-medium mb-2">Email</h4>
-                  <p className="text-[#f8fafc]">sagormiah8204@gmail.com</p>
+                  <h4 className="text-(--primary) font-medium mb-2">Email</h4>
+                  <p className="">sagormiah8204@gmail.com</p>
                 </div>
 
                 <div>
-                  <h4 className="text-[#f97316] font-medium mb-2">
+                  <h4 className="text-(--primary) font-medium mb-2">
                     Book a Meeting
                   </h4>
                   <a
                     href="https://calendar.app.google"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#f97316] hover:underline"
+                    className="text-(--primary) hover:underline"
                   >
                     Schedule a meeting
                   </a>
                 </div>
 
                 <div>
-                  <h4 className="text-[#f97316] font-medium mb-2">Location</h4>
-                  <p className="text-[#f8fafc]">Dhaka, Bangladesh</p>
+                  <h4 className="text-(--primary) font-medium mb-2">Location</h4>
+                  <p className="">Dhaka, Bangladesh</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-[#1e293b] bg-opacity-50 backdrop-blur-lg rounded-xl p-8 border border-slate-700">
-              <h4 className="text-[#f97316] font-medium mb-4">Follow Me</h4>
+            <div className="bg-(--bg-surface) bg-opacity-50 backdrop-blur-lg rounded-md p-8 border border-(--border)">
+              <h4 className="text-(--primary) font-medium mb-4">Follow Me</h4>
               <div className="flex space-x-4">
                 <a
                   href="https://github.com/gausalmunirtushar"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#f8fafc] hover:text-[#f97316] transition-colors"
+                  className=" hover:text-(--primary) transition-colors"
                 >
                   GitHub
                 </a>
@@ -168,7 +168,7 @@ export default function Contact() {
                   href="https://linkedin.com/in/gausalmunirtushar"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#f8fafc] hover:text-[#f97316] transition-colors"
+                  className=" hover:text-(--primary) transition-colors"
                 >
                   LinkedIn
                 </a>
@@ -176,7 +176,7 @@ export default function Contact() {
                   href="https://twitter.com/gausalmunirtushar"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#f8fafc] hover:text-[#f97316] transition-colors"
+                  className=" hover:text-(--primary) transition-colors"
                 >
                   Twitter
                 </a>

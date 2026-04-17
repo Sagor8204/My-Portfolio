@@ -40,7 +40,7 @@ export default function Portfolio() {
               key={category}
               className={`px-6 py-2 rounded-md border border-(--border) transition-all duration-300 cursor-pointer ${
                 activeFilter === category
-                  ? "bg-linear-to-r from-(--primary) to-(--gradient) text-white font-medium"
+                  ? "bg-(--primary) text-white font-medium"
                   : "bg-(--bg-surface) text-(--text-main) hover:bg-[#334155]"
               }`}
               onClick={() => setActiveFilter(category)}
@@ -63,13 +63,13 @@ export default function Portfolio() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-[#1e293b] flex flex-col justify-between bg-opacity-50 backdrop-blur-lg rounded-xl overflow-hidden border border-slate-700 hover:border-[#f97316] transition-colors duration-300"
+              className="bg-(--bg-surface) flex flex-col justify-between bg-opacity-50 backdrop-blur-lg rounded-xl overflow-hidden border border-(--border) hover:border-(--primary-hover) transition-colors duration-300"
             >
               <div>
                 {/* Project Image */}
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src={project.imageUrl}
+                    src={project.imageUrl || "/images/blog1.webp"}
                     alt={project.title}
                     fill
                     className="object-cover"
@@ -78,10 +78,10 @@ export default function Portfolio() {
                 </div>
 
                 <div className="px-6">
-                  <h3 className="text-xl font-bold text-[#f8fafc] mb-2">
+                  <h3 className="text-xl font-bold text-(--text-main) mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-[#94a3b8] text-sm mb-4">
+                  <p className="text-(--text-muted) text-sm mb-4">
                     {project.description}
                   </p>
                 </div>
@@ -93,7 +93,7 @@ export default function Portfolio() {
                   {project.techTags.map((tag, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-[#0f172a] text-[#f97316] text-[10px] rounded-full border border-[#f97316]"
+                      className="px-3 py-1 text-[10px] bg-(--bg-surface) rounded-md border border-(--border) border-b-2 border-b-(--primary)"
                     >
                       {tag}
                     </span>
@@ -112,14 +112,14 @@ export default function Portfolio() {
                   <LinkButton
                     text="live"
                     href={project.links.live}
-                    styles="px-4 py-2 bg-linear-to-r w-1/2 text-center from-[#f97316] to-[#ea580c] rounded-full text-white text-sm font-medium hover:opacity-90 transition-opacity"
+                    styles="px-4 py-2 w-1/2 text-center rounded-md text-(--text-main) border border-(--border) text-sm font-medium transition-all duration-300 hover:bg-(--primary) hover:border-(--primary)"
                     target="_blank"
                     rel="noopener noreferrer"
                   />
                   <LinkButton
                     text="Code"
                     href={project.links.github}
-                    styles="px-4 py-2 border w-1/2 text-center border-[#f97316] rounded-full text-white text-sm font-medium hover:bg-[#f97316] transition-colors"
+                    styles="px-4 py-2 w-1/2 text-center rounded-md text-(--text-main) border border-(--border) text-sm font-medium transition-all duration-300 hover:bg-(--primary) hover:border-(--primary)"
                     target="_blank"
                     rel="noopener noreferrer"
                   />
