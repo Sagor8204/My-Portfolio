@@ -9,7 +9,7 @@ export default function Resume() {
         {/* PDF Preview */}
         <div className="w-full max-w-3xl h-[65vh]">
           <iframe
-            src="https://drive.google.com/file/d/1iklBbZyayvFhskgHZ0dL83UZyFHkTnZO/preview"
+            src="https://drive.google.com/file/d/1qK_y0k3whP4TxRAoMAOZx4fhGD8bmjKW/preview"
             className="border-none"
             width="100%"
             height="100%"
@@ -21,7 +21,7 @@ export default function Resume() {
         {/* Download Button */}
         <a
           href="https://drive.google.com/uc?export=download&id=1iklBbZyayvFhskgHZ0dL83UZyFHkTnZO"
-          className="mt-8 px-6 py-3 flex items-center gap-2 rounded-full bg-[#f97316] text-white font-medium hover:bg-[#f97316] transition"
+          className="mt-8 flex items-center gap-2 px-8 py-3 bg-linear-to-r from-(--primary) to-(--primary-hover) rounded-md font-medium text-white hover:from-(--primary-hover) hover:to-(--primary) transition-all duration-500"
         >
           <TbDownload className="text-lg" />
           Download Resume

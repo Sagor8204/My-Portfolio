@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Md Sagor - Full Stack Developer",
-  description: "Personal portfolio of Md Sagor, a Full Stack Developer",
+  title: "Md Sagor - Junior Software Engineer",
+  description: "Personal portfolio of Md Sagor, a Junior Software Engineer",
   icons: {
     icon: "/images/logo.svg",
   },
