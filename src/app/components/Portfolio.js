@@ -18,7 +18,7 @@ export default function Portfolio() {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="portfolio" className="py-20 px-4">
+    <section id="portfolio" className="py-10 px-4">
       <div className="mx-auto">
         <motion.div
           className="text-center mb-10"
@@ -77,17 +77,17 @@ export default function Portfolio() {
                   />
                 </div>
 
-                <div className="px-6">
+                <div className="px-3 pt-3">
                   <h3 className="text-xl font-bold text-(--text-main) mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-(--text-muted) text-sm mb-4">
+                  <p className="text-(--text-muted) text-sm mb-2">
                     {project.description}
                   </p>
                 </div>
               </div>
 
-              <div className="p-6">
+              <div className="p-3">
                 {/* Tech Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.techTags.map((tag, i) => (

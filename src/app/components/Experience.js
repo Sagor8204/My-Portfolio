@@ -5,10 +5,10 @@ import { experience } from "../../../lib/data";
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 px-4">
+    <section id="experience" className="py-10 px-4">
       <div className="mx-auto">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

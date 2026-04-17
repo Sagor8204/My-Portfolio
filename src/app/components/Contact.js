@@ -157,7 +157,7 @@ export default function Contact() {
               <h4 className="text-(--primary) font-medium mb-4">Follow Me</h4>
               <div className="flex space-x-4">
                 <a
-                  href="https://github.com/gausalmunirtushar"
+                  href="https://github.com/Sagor8204"
                   target="_blank"
                   rel="noopener noreferrer"
                   className=" hover:text-(--primary) transition-colors"
@@ -165,20 +165,12 @@ export default function Contact() {
                   GitHub
                 </a>
                 <a
-                  href="https://linkedin.com/in/gausalmunirtushar"
+                  href="https://www.linkedin.com/in/mdsagor-dev/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className=" hover:text-(--primary) transition-colors"
                 >
                   LinkedIn
-                </a>
-                <a
-                  href="https://twitter.com/gausalmunirtushar"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className=" hover:text-(--primary) transition-colors"
-                >
-                  Twitter
                 </a>
               </div>
             </div>
