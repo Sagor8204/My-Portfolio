@@ -20,7 +20,7 @@ export default function Resume() {
 
         {/* Download Button */}
         <a
-          href="https://drive.google.com/uc?export=download&id=1iklBbZyayvFhskgHZ0dL83UZyFHkTnZO"
+          href="https://drive.google.com/uc?export=download&id=1qK_y0k3whP4TxRAoMAOZx4fhGD8bmjKW"
           className="mt-8 flex items-center gap-2 px-8 py-3 bg-linear-to-r from-(--primary) to-(--primary-hover) rounded-md font-medium text-white hover:from-(--primary-hover) hover:to-(--primary) transition-all duration-500"
         >
           <TbDownload className="text-lg" />
@@ -30,3 +30,4 @@ export default function Resume() {
     </div>
   );
 }
+// https://drive.google.com/file/d/1qK_y0k3whP4TxRAoMAOZx4fhGD8bmjKW/view?usp=sharing
