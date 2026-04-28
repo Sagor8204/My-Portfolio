@@ -3,13 +3,65 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { skills } from "../../../lib/data";
-import { FaGlobe, FaCode, FaDatabase, FaWrench } from "react-icons/fa";
+import { 
+  FaHtml5, 
+  FaCss3Alt, 
+  FaJs, 
+  FaReact, 
+  FaSass, 
+  FaPython, 
+  FaGitAlt, 
+  FaLinux, 
+  FaDocker,
+  FaGlobe,
+  FaCode,
+  FaDatabase,
+  FaWrench,
+  FaBrain
+} from "react-icons/fa";
+import { 
+  SiNextdotjs, 
+  SiRedux, 
+  SiReactquery, 
+  SiTailwindcss, 
+  SiFramer, 
+  SiGreensock, 
+  SiMysql, 
+  SiPostgresql, 
+  SiMongodb 
+} from "react-icons/si";
 
 const skillIcons = {
-  web: <FaGlobe size={24} className="text-(--primary)" />,
-  programming: <FaCode size={24} className="text-(--primary)" />,
-  databases: <FaDatabase size={24} className="text-(--primary)" />,
-  tools: <FaWrench size={24} className="text-(--primary)" />,
+  "HTML5": <FaHtml5 size={40} className="text-[#E34F26]" />,
+  "CSS3": <FaCss3Alt size={40} className="text-[#1572B6]" />,
+  "JavaScript": <FaJs size={40} className="text-[#F7DF1E]" />,
+  "React": <FaReact size={40} className="text-[#61DAFB]" />,
+  "Next.js": <SiNextdotjs size={40} className="text-(--text-main)" />,
+  "Redux": <SiRedux size={40} className="text-[#764ABC]" />,
+  "Tanstack Query": <SiReactquery size={40} className="text-[#FF4154]" />,
+  "Tailwind CSS": <SiTailwindcss size={40} className="text-[#06B6D4]" />,
+  "Framer Motion": <SiFramer size={40} className="text-(--text-main)" />,
+  "SASS": <FaSass size={40} className="text-[#CC6699]" />,
+  "Zustand": <FaBrain size={40} className="text-[#443E38]" />,
+  "GSAP": <SiGreensock size={40} className="text-[#88CE02]" />,
+  "Python": <FaPython size={40} className="text-[#3776AB]" />,
+  "MySQL": <SiMysql size={40} className="text-[#4479A1]" />,
+  "PostgreSQL": <SiPostgresql size={40} className="text-[#4169E1]" />,
+  "MongoDB": <SiMongodb size={40} className="text-[#47A248]" />,
+  "Git": <FaGitAlt size={40} className="text-[#F05032]" />,
+  "Linux": <FaLinux size={40} className="text-(--text-main)" />,
+  "Docker": <FaDocker size={40} className="text-[#2496ED]" />,
+};
+
+const renderCategoryIcon = (id, isActive) => {
+  const className = isActive ? "text-white" : "text-(--primary)";
+  const icons = {
+    web: <FaGlobe size={24} className={className} />,
+    programming: <FaCode size={24} className={className} />,
+    databases: <FaDatabase size={24} className={className} />,
+    tools: <FaWrench size={24} className={className} />,
+  };
+  return icons[id];
 };
 
 export default function Skills() {
@@ -43,13 +95,14 @@ export default function Skills() {
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              className={`px-6 py-3 rounded-md border border-(--border) transition-all duration-300 cursor-pointer ${
+              className={`px-6 py-3 rounded-md border border-(--border) transition-all duration-300 cursor-pointer flex items-center gap-2 ${
                 activeTab === tab.id
                   ? "bg-(--primary) text-white font-medium"
                   : "bg-(--bg-surface) text-(--text-main) hover:bg-[#334155]"
               }`}
               onClick={() => setActiveTab(tab.id)}
             >
+              {renderCategoryIcon(tab.id, activeTab === tab.id)}
               {tab.label}
             </button>
           ))}
@@ -73,7 +126,7 @@ export default function Skills() {
               transition={{ duration: 0.3, delay: index * 0.05 }}
             >
               <div className="mb-4">
-                {skillIcons[activeTab]}
+                {skillIcons[skill.name] || renderCategoryIcon(activeTab, false)}
               </div>
               <h3 className="text-lg font-bold text-(--text-main) mb-1">{skill.name}</h3>
             </motion.div>
