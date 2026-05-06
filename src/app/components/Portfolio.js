@@ -93,7 +93,7 @@ export default function Portfolio() {
                   {project.techTags.map((tag, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 text-[10px] bg-(--bg-surface) rounded-md border border-(--border) border-b-2 border-b-(--primary)"
+                      className="px-2 py-1 text-[10px] bg-(--bg-surface) rounded-md border border-(--border) border-b-2 border-b-(--primary)"
                     >
                       {tag}
                     </span>
