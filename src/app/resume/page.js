@@ -9,7 +9,7 @@ export default function Resume() {
         {/* PDF Preview */}
         <div className="w-full max-w-3xl h-[65vh]">
           <iframe
-            src="https://drive.google.com/file/d/1W2Px6UPBFt4acn29PXi4IvZ8_IZ8dv2k/preview"
+            src="https://drive.google.com/file/d/1BuDAlneDTDL1G5LgjfXQPIZKl2OnDYKO/preview"
             className="border-none"
             width="100%"
             height="100%"
@@ -32,3 +32,4 @@ export default function Resume() {
 }
 // https://drive.google.com/file/d/1qK_y0k3whP4TxRAoMAOZx4fhGD8bmjKW/view?usp=sharing
 // https://drive.google.com/file/d/1W2Px6UPBFt4acn29PXi4IvZ8_IZ8dv2k/view?usp=sharing
+// https://drive.google.com/file/d/1BuDAlneDTDL1G5LgjfXQPIZKl2OnDYKO/view?usp=sharing
